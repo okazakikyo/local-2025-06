@@ -1,0 +1,105 @@
+/* src/css/LanguageSelector.module.css */
+
+.container {
+    position: relative;
+    width: auto;
+}
+
+/* Nút chính để bật/tắt dropdown */
+.toggleButton {
+    /* Layout giống trong ảnh */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Căn phải nếu cần */
+    gap: 8px;
+
+    /* Styling */
+    background-color: transparent; /* Nền trong suốt */
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Viền mờ */
+    border-radius: 6px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-family: inherit; /* Kế thừa font từ cha */
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.toggleButton:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.flagIcon {
+    width: 20px;
+    height: auto;
+    border-radius: 2px;
+    /* Giả sử icon màu đỏ trong ảnh là cờ Việt Nam */
+}
+
+.languageLabel {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+/* Mũi tên chevron */
+.chevron {
+    width: 8px;
+    height: 8px;
+    border-style: solid;
+    border-color: white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg); /* Trỏ xuống */
+    transition: transform 0.2s ease;
+}
+
+.chevronUp {
+    transform: rotate(-135deg); /* Trỏ lên khi mở */
+}
+
+/* Danh sách dropdown */
+.dropdownList {
+    position: absolute;
+    top: calc(100% + 5px); /* Vị trí dưới nút toggle */
+    right: 0;
+    min-width: 120px;
+    background-color: #2d3436; /* Nền tối */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    list-style: none;
+    margin: 0;
+    padding: 0.5rem 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+    overflow: hidden;
+}
+
+/* Các mục trong dropdown */
+.dropdownItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background: none;
+    border: none;
+    text-align: left;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.2s ease;
+}
+
+.dropdownItem:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.dropdownItem:disabled {
+    color: #a4b0be; /* Màu cho mục đã chọn */
+    font-weight: bold;
+    cursor: default;
+    background-color: rgba(255, 255, 255, 0.05); /* Nền nhẹ cho mục đã chọn */
+}
+
+.dropdownItem:disabled:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}

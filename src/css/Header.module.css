@@ -1,0 +1,102 @@
+.appHeader{
+    display: flex;
+    padding: 12px 60px;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.40);
+}
+
+.logoContainer{
+    width: 178px;
+    height: 60px;
+    flex-shrink: 0;
+}
+.navList{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+/* --- Navigation Container --- */
+.navigation {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    font-family: "Source Serif 4";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+/* --- Main Nav List (Home, About, Menu) --- */
+.navList {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 1.5rem; /* Khoảng cách giữa các mục Home, About, Menu */
+}
+
+.navItem {
+    display: flex;
+    align-items: center;
+}
+
+/* --- Styling cho NavLink (Home, About, Menu) --- */
+.navLink {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    border: 2px solid transparent; /* Thêm border trong suốt để không bị giật layout khi active */
+    transition: color 0.3s ease;
+    position: relative; /* Cần thiết cho pseudo-element ::after */
+}
+
+/* --- Styling cho NavLink khi active (trạng thái của "Home") --- */
+.active {
+    color: #fff;
+    border-radius: 4px;
+    position: relative;          /* anchor for ::after */
+}
+
+.active::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 40px;
+    height: 4px;
+
+    /* use external svg as background */
+    background-image: url('/flags/divFlag.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;  /* cover full pseudo-element */
+
+    /* nếu muốn đổi màu đường gạch, SVG nên là vector đơn sắc và
+       bạn có thể dùng filter hoặc dùng mask-image tuỳ trình duyệt: */
+    /* mask: url('/flags/divFlag.svg') center/contain no-repeat;
+       background-color: #fff; */
+}
+
+.ctaButton {
+    text-decoration: none;
+    border: 1px solid  #FBFBFB;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    color: #FBFBFB;
+    text-align: center;
+}
+
+/* --- Placeholder cho các phần tử khác --- */
+.logoContainer, .languageSwitcher {
+    /* Thêm style cho logo và language switcher nếu cần */
+    flex-shrink: 0;
+}

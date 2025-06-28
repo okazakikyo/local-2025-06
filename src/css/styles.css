@@ -1,0 +1,40 @@
+
+@font-face {
+  font-family: 'The Silver Editorial';
+  src: local('The Silver Editorial Italic'), local('The-Silver-Editorial-Italic'),
+  url('TheSilverEditorial-Italic.woff2') format('woff2'),
+  url('TheSilverEditorial-Italic.woff') format('woff'),
+  url('TheSilverEditorial-Italic.ttf') format('truetype')
+  local('The Silver Editorial Regular'), local('The-Silver-Editorial-Regular'),
+  url('TheSilverEditorial-Regular.woff2') format('woff2'),
+  url('TheSilverEditorial-Regular.woff') format('woff'),
+  url('TheSilverEditorial-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+/* Tailwind Core */
+@import 'tailwindcss';
+
+/* ReUI Configs */
+@import './config.reui.css';
+
+/** Global Styles **/
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  *:focus-visible {
+    @apply outline-ring rounded-xs shadow-none outline-2 outline-offset-3 transition-none!;
+  }
+}
+
+html, body {
+  min-height: 100vh;
+  min-width: 100vw;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Source Serif 4', sans-serif;
+}

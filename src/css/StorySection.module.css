@@ -1,0 +1,21 @@
+.storySection {
+    width: 100%;
+    padding: 100px 0;
+    /*background-size: 200px auto;*/
+}
+.bg{
+    background-image:
+            url('images/eiffel-light.svg');
+    background-repeat: no-repeat;
+    background-position: calc(50% - 10px) 100% ;
+    background-size: 45%;
+}
+.storyTitle{
+    color: #000;
+    font-family: "The Silver Editorial", serif;
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    text-transform: capitalize;
+}

@@ -1,0 +1,22 @@
+.hero{
+    @apply w-full bg-cover bg-center bg-no-repeat;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.42) 43.45%, rgba(0, 0, 0, 0.70) 100%), url('images/we-dinner.png') lightgray 50% / cover no-repeat;
+}
+.font_silver{
+    font-family: 'The Silver Editorial', serif;
+}
+
+.reservation_button{
+    display: flex;
+    padding: 16px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid #FBFBFB;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    color: var(--gray-gray-50, #FBFBFB);
+    text-align: center;
+}

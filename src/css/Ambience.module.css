@@ -1,0 +1,81 @@
+.bgRed {
+    background: url('images/bg1.png') lightgray 160px 160px repeat;
+    background-color: #A41115;
+    background-blend-mode: multiply, multiply;
+    background-size: contain;
+    /* hoặc 'auto', tùy ý */
+    background-repeat: repeat, no-repeat;
+    background-position: 0% 0%, center;
+}
+
+.ambience {
+    display: flex;
+    padding: 60px;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    align-self: stretch;
+}
+
+.header {
+    color: var(--White, #FFF);
+    text-align: center;
+    font-family: "The Silver Editorial";
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    /* 63px */
+    text-transform: capitalize;
+}
+
+.text {
+
+    align-self: stretch;
+    color: #FFF7EC;
+    font-family: "Source Serif 4", sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.cheft_recomment {
+    display: flex;
+    padding: 100px 180px;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    align-self: stretch;
+
+    .ambience__title {
+        align-self: stretch;
+        color: var(--White, #FFF);
+        text-align: center;
+        font-family: "The Silver Editorial";
+        font-size: 42px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        /* 63px */
+        text-transform: capitalize;
+    }
+
+    .cheft_recomment__text {
+        color: var(--Beige, #FFF7EC);
+        font-family: "Source Serif 4";
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .mid_table {
+        display: flex;
+        align-items: center;
+        align-content: center;
+        gap: 0px 80px;
+        align-self: stretch;
+        flex-wrap: wrap;
+    }
+}
